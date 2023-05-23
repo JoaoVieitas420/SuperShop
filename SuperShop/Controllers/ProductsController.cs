@@ -54,7 +54,7 @@ namespace SuperShop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind(int id, Product product)
+        public async Task<IActionResult> Create([Bind("ID,Name,Price,ImageUrl,LastPurchase,LastSale,IsAvailable,Stock")] Product product)
         {
             if (ModelState.IsValid)
             {
